@@ -29,7 +29,12 @@ end
 
 appraise 'rails-5.0' do
   # Only works with Ruby >= 2.2
-  gem 'rails', '>= 5.0.0.racecar1', '< 5.1'
+  gem 'rails', '~5.0.0'
+end
+
+appraise 'rails-5.1' do
+  # Only works with Ruby >= 2.2
+  gem 'rails', '~5.1.0'
 end
 
 appraise 'mongoid-3.0' do
@@ -59,5 +64,5 @@ appraise 'nobrainer' do
 
   # When activesupport 5 was released, it required ruby 2.2.2 as a minimum.
   # Locking this down to 4.2.10 allows our Ruby 1.9 tests to keep working.
-  gem 'activesupport', '4.2.6', :platforms => :ruby_19
+  gem 'activesupport', '4.2.10', :platforms => :ruby_19
 end
